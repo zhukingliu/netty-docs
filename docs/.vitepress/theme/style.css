@@ -203,3 +203,20 @@ blockquote {
 ::selection {
   background-color: rgba(88, 166, 255, 0.3);
 }
+
+/* Mermaid 图表容器 */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: var(--vp-c-bg-alt);
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-border);
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

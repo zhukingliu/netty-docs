@@ -116,5 +116,15 @@ export default defineConfig({
       dark: 'one-dark-pro',
     },
     lineNumbers: true,
+    config: (md) => {
+      const defaultFence = md.renderer.rules.fence!
+      md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        if (token.info.trim() === 'mermaid') {
+          return `<div class="mermaid">${token.content}</div>`
+        }
+        return defaultFence(tokens, idx, options, env, self)
+      }
+    },
   },
 })
