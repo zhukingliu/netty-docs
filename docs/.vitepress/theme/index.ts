@@ -29,13 +29,20 @@ export default {
       await nextTick()
       const elements = document.querySelectorAll('.mermaid')
       for (const el of elements) {
-        const id = 'mermaid-' + Math.random().toString(36).substring(7)
-        el.id = id
         // 跳过已渲染的
         if (el.getAttribute('data-processed')) continue
         el.setAttribute('data-processed', 'true')
+
+        const id = 'mermaid-' + Math.random().toString(36).substring(7)
+        el.id = id
+
         try {
-          const code = el.textContent || ''
+          // 从 base64 编码的 data-graph 属性中解码原始 mermaid 内容
+          const encoded = el.getAttribute('data-graph') || ''
+          const code = decodeURIComponent(Array.from(atob(encoded), c =>
+            '%' + c.charCodeAt(0).toString(16).padStart(2, '0')
+          ).join(''))
+
           const { svg } = await mermaid.render(id + '-svg', code)
           el.innerHTML = svg
         } catch (e) {

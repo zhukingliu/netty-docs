@@ -121,7 +121,9 @@ export default defineConfig({
       md.renderer.rules.fence = (tokens, idx, options, env, self) => {
         const token = tokens[idx]
         if (token.info.trim() === 'mermaid') {
-          return `<div class="mermaid">${token.content}</div>`
+          // 用 base64 编码内容，避免 HTML 渲染时换行符被压缩
+          const encoded = Buffer.from(token.content).toString('base64')
+          return `<div class="mermaid" data-graph="${encoded}"></div>`
         }
         return defaultFence(tokens, idx, options, env, self)
       }
