@@ -2,36 +2,31 @@
 layout: home
 
 hero:
-  name: "Netty 学习指南"
-  text: "从入门到精通"
-  tagline: 全面覆盖 Netty 基础知识、源码分析与实战操作
+  name: "后端技术学习指南"
+  text: "Netty + Kafka"
+  tagline: 从入门到精通，全面覆盖 Netty 与 Kafka 的基础知识、核心原理与实战操作
   image:
     src: /netty-docs/favicon.svg
-    alt: Netty
+    alt: Logo
   actions:
     - theme: brand
-      text: 开始学习
-      link: /basics/
+      text: Netty 学习
+      link: /netty/basics/
     - theme: alt
-      text: 实战操作
-      link: /practice/
+      text: Kafka 学习
+      link: /kafka/basics/
     - theme: alt
       text: GitHub
-      link: https://github.com/netty/netty
+      link: https://github.com/zhukingliu/netty-docs
 
 features:
-  - icon: 📚
-    title: 基础知识
-    details: 从 BIO/NIO/AIO 开始，深入理解 Reactor 模型、Channel、Pipeline、EventLoop 等 Netty 核心概念，夯实理论基础。
-    link: /basics/
+  - icon: 📡
+    title: Netty 网络框架
+    details: 从 BIO/NIO/AIO 开始，深入 Reactor 模型、Channel/Pipeline/EventLoop 核心组件，剖析 Bootstrap 启动与内存管理源码，手把手构建 Echo 服务、聊天室、HTTP 服务、WebSocket 和自定义协议。
+    link: /netty/basics/
 
-  - icon: 🔬
-    title: 源码分析
-    details: 深入 Netty 源码，剖析 Bootstrap 启动流程、EventLoop 线程模型、Pipeline 责任链模式以及内存管理机制。
-    link: /source/
-
-  - icon: 🛠️
-    title: 实战操作
-    details: 手把手带你构建 Echo 服务器、多人聊天室、HTTP 服务、WebSocket 通信、自定义协议等完整项目。
-    link: /practice/
+  - icon: 📨
+    title: Kafka 消息引擎
+    details: 系统学习 Topic/Partition/ConsumerGroup 核心概念，深入日志存储、副本机制、ISR 选举、事务与幂等性原理，实战 Spring Boot 集成、消息可靠性保障与性能调优。
+    link: /kafka/basics/
 ---
