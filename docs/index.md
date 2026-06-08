@@ -6,7 +6,7 @@ hero:
   text: "Netty + Kafka + gRPC + MongoDB"
   tagline: 从入门到精通，全面覆盖 Netty、Kafka、gRPC 与 MongoDB 的基础知识、核心原理与实战操作
   image:
-    src: /netty-docs/favicon.svg
+    src: /favicon.svg
     alt: Logo
   actions:
     - theme: brand

@@ -5,10 +5,10 @@ export default defineConfig({
   lang: 'zh-CN',
   title: '后端技术学习指南',
   description: 'Netty + Kafka + gRPC 从入门到精通 — 基础知识、核心原理、实战操作',
-  head: [['link', { rel: 'icon', href: '/netty-docs/favicon.svg' }]],
+  head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
 
   themeConfig: {
-    logo: '/netty-docs/favicon.svg',
+    logo: '/favicon.svg',
     search: {
       provider: 'local',
       options: {
