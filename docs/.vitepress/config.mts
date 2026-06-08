@@ -56,6 +56,14 @@ export default defineConfig({
         ],
       },
       {
+        text: 'MongoDB 学习',
+        items: [
+          { text: '基础知识', link: '/mongodb/basics/' },
+          { text: '核心原理', link: '/mongodb/internals/' },
+          { text: '实战操作', link: '/mongodb/practice/' },
+        ],
+      },
+      {
         text: '资源',
         items: [
           { text: 'Netty 官网', link: 'https://netty.io/' },
@@ -64,6 +72,8 @@ export default defineConfig({
           { text: 'Kafka GitHub', link: 'https://github.com/apache/kafka' },
           { text: 'gRPC 官网', link: 'https://grpc.io/' },
           { text: 'gRPC GitHub', link: 'https://github.com/grpc/grpc-java' },
+          { text: 'MongoDB 官网', link: 'https://www.mongodb.com/' },
+          { text: 'MongoDB 中文社区', link: 'https://mongoing.com/' },
         ],
       },
     ],
@@ -188,6 +198,44 @@ export default defineConfig({
           ],
         },
       ],
+      '/mongodb/basics/': [
+        {
+          text: 'MongoDB 基础知识',
+          items: [
+            { text: '概述', link: '/mongodb/basics/' },
+            { text: 'MongoDB 简介', link: '/mongodb/basics/what-is-mongodb' },
+            { text: 'MongoDB vs RDBMS', link: '/mongodb/basics/vs-rdbms' },
+            { text: '数据模型设计', link: '/mongodb/basics/data-model' },
+            { text: 'CRUD 基础', link: '/mongodb/basics/crud-basics' },
+          ],
+        },
+      ],
+      '/mongodb/internals/': [
+        {
+          text: 'MongoDB 核心原理',
+          items: [
+            { text: '概述', link: '/mongodb/internals/' },
+            { text: 'WiredTiger 存储引擎', link: '/mongodb/internals/wiredtiger' },
+            { text: '副本集原理', link: '/mongodb/internals/replica-set' },
+            { text: '分片集群', link: '/mongodb/internals/sharding' },
+            { text: '索引原理', link: '/mongodb/internals/indexing' },
+            { text: '事务与 ACID', link: '/mongodb/internals/transactions' },
+          ],
+        },
+      ],
+      '/mongodb/practice/': [
+        {
+          text: 'MongoDB 实战操作',
+          items: [
+            { text: '概述', link: '/mongodb/practice/' },
+            { text: 'Docker 快速入门', link: '/mongodb/practice/quick-start' },
+            { text: 'Spring Data MongoDB', link: '/mongodb/practice/spring-data-mongo' },
+            { text: '聚合管道实战', link: '/mongodb/practice/aggregation' },
+            { text: '副本集部署', link: '/mongodb/practice/replica-set-deploy' },
+            { text: '性能优化', link: '/mongodb/practice/performance-tuning' },
+          ],
+        },
+      ],
     },
 
     outline: {
@@ -209,7 +257,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 VitePress 构建 | Netty + Kafka + gRPC 学习笔记',
+      message: '基于 VitePress 构建 | Netty + Kafka + gRPC + MongoDB 学习笔记',
     },
   },
 

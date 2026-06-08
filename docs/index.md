@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "后端技术学习指南"
-  text: "Netty + Kafka + gRPC"
-  tagline: 从入门到精通，全面覆盖 Netty、Kafka 与 gRPC 的基础知识、核心原理与实战操作
+  text: "Netty + Kafka + gRPC + MongoDB"
+  tagline: 从入门到精通，全面覆盖 Netty、Kafka、gRPC 与 MongoDB 的基础知识、核心原理与实战操作
   image:
     src: /netty-docs/favicon.svg
     alt: Logo
@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: gRPC 学习
       link: /grpc/basics/
+    - theme: alt
+      text: MongoDB 学习
+      link: /mongodb/basics/
 
 features:
   - icon: 📡
@@ -34,4 +37,9 @@ features:
     title: gRPC 远程调用
     details: 掌握 Protocol Buffers 定义与服务生成，深入 HTTP/2 帧、Channel 连接管理、负载均衡与拦截器原理，实战四种调用模式（一元/服务端流/客户端流/双向流）与 Spring Boot 集成。
     link: /grpc/basics/
+
+  - icon: 🍃
+    title: MongoDB 文档数据库
+    details: 理解 NoSQL 与文档模型的优势，深入 WiredTiger 存储引擎、副本集选举、分片集群与事务原理，实战 Spring Data MongoDB、聚合管道、副本集部署与性能优化。
+    link: /mongodb/basics/
 ---
