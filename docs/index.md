@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "后端技术学习指南"
-  text: "Netty + Kafka"
-  tagline: 从入门到精通，全面覆盖 Netty 与 Kafka 的基础知识、核心原理与实战操作
+  text: "Netty + Kafka + gRPC"
+  tagline: 从入门到精通，全面覆盖 Netty、Kafka 与 gRPC 的基础知识、核心原理与实战操作
   image:
     src: /netty-docs/favicon.svg
     alt: Logo
@@ -16,8 +16,8 @@ hero:
       text: Kafka 学习
       link: /kafka/basics/
     - theme: alt
-      text: GitHub
-      link: https://github.com/zhukingliu/netty-docs
+      text: gRPC 学习
+      link: /grpc/basics/
 
 features:
   - icon: 📡
@@ -29,4 +29,9 @@ features:
     title: Kafka 消息引擎
     details: 系统学习 Topic/Partition/ConsumerGroup 核心概念，深入日志存储、副本机制、ISR 选举、事务与幂等性原理，实战 Spring Boot 集成、消息可靠性保障与性能调优。
     link: /kafka/basics/
+
+  - icon: 🔗
+    title: gRPC 远程调用
+    details: 掌握 Protocol Buffers 定义与服务生成，深入 HTTP/2 帧、Channel 连接管理、负载均衡与拦截器原理，实战四种调用模式（一元/服务端流/客户端流/双向流）与 Spring Boot 集成。
+    link: /grpc/basics/
 ---

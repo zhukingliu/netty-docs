@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/netty-docs/',
   lang: 'zh-CN',
   title: '后端技术学习指南',
-  description: 'Netty + Kafka 从入门到精通 — 基础知识、核心原理、实战操作',
+  description: 'Netty + Kafka + gRPC 从入门到精通 — 基础知识、核心原理、实战操作',
   head: [['link', { rel: 'icon', href: '/netty-docs/favicon.svg' }]],
 
   themeConfig: {
@@ -48,12 +48,22 @@ export default defineConfig({
         ],
       },
       {
+        text: 'gRPC 学习',
+        items: [
+          { text: '基础知识', link: '/grpc/basics/' },
+          { text: '核心原理', link: '/grpc/internals/' },
+          { text: '实战操作', link: '/grpc/practice/' },
+        ],
+      },
+      {
         text: '资源',
         items: [
           { text: 'Netty 官网', link: 'https://netty.io/' },
           { text: 'Netty GitHub', link: 'https://github.com/netty/netty' },
           { text: 'Kafka 官网', link: 'https://kafka.apache.org/' },
           { text: 'Kafka GitHub', link: 'https://github.com/apache/kafka' },
+          { text: 'gRPC 官网', link: 'https://grpc.io/' },
+          { text: 'gRPC GitHub', link: 'https://github.com/grpc/grpc-java' },
         ],
       },
     ],
@@ -139,6 +149,45 @@ export default defineConfig({
           ],
         },
       ],
+      '/grpc/basics/': [
+        {
+          text: 'gRPC 基础知识',
+          items: [
+            { text: '概述', link: '/grpc/basics/' },
+            { text: 'gRPC 简介', link: '/grpc/basics/what-is-grpc' },
+            { text: 'Protocol Buffers', link: '/grpc/basics/protobuf' },
+            { text: '服务定义', link: '/grpc/basics/service-definition' },
+            { text: 'gRPC vs REST', link: '/grpc/basics/grpc-vs-rest' },
+          ],
+        },
+      ],
+      '/grpc/internals/': [
+        {
+          text: 'gRPC 核心原理',
+          items: [
+            { text: '概述', link: '/grpc/internals/' },
+            { text: 'HTTP/2 基础', link: '/grpc/internals/http2' },
+            { text: 'Channel 连接管理', link: '/grpc/internals/channel' },
+            { text: '负载均衡', link: '/grpc/internals/load-balancing' },
+            { text: '拦截器链', link: '/grpc/internals/interceptor' },
+            { text: 'Deadline 与重试', link: '/grpc/internals/deadline-retry' },
+          ],
+        },
+      ],
+      '/grpc/practice/': [
+        {
+          text: 'gRPC 实战操作',
+          items: [
+            { text: '概述', link: '/grpc/practice/' },
+            { text: '快速入门', link: '/grpc/practice/quick-start' },
+            { text: '一元 CRUD', link: '/grpc/practice/unary-crud' },
+            { text: '服务端流式', link: '/grpc/practice/server-streaming' },
+            { text: '客户端流式', link: '/grpc/practice/client-streaming' },
+            { text: '双向流式', link: '/grpc/practice/bidirectional-streaming' },
+            { text: 'Spring Boot 集成', link: '/grpc/practice/spring-boot-grpc' },
+          ],
+        },
+      ],
     },
 
     outline: {
@@ -160,7 +209,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 VitePress 构建 | Netty + Kafka 学习笔记',
+      message: '基于 VitePress 构建 | Netty + Kafka + gRPC 学习笔记',
     },
   },
 
